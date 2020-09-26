@@ -15,7 +15,7 @@
   --font-xl: 2.2rem;
   --line-height-normal: 1.94;
   --line-height-md: 1.5;
-  --page-max-width: 1380px;
+  --page-max-width: 1480px;
   --num-grid-columns: 12;
   --section-spacing-lg: 250px;
   --section-spacing-normal: 56px;
@@ -173,7 +173,7 @@ a {
   background-color: var(--secondary);
   color: #fcfcfc;
   height: 100vh;
-  max-width: 320px;
+  max-width: 500px;
   width: 100%;
   padding: 24px 48px 120px 24px;
   right: 0;
