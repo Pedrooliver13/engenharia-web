@@ -1,0 +1,28 @@
+/* querys */
+$sm: 36em;
+$md: 48em;
+$lg: 62em;
+$xl: 75em;
+
+@mixin mediaQuery($size) {
+  @if $size == sm {
+    @media screen and (max-width: $sm) {
+      @content; // content que eu passar aqui;
+    }
+  }
+  @else if $size == md {
+    @media screen and (max-width: $md) {
+      @content;
+    }
+  }
+  @else if $size == lg {
+    @media screen and (max-width: $lg) {
+      @content;
+    }
+  }
+  @else if $size == xl {
+    @media screen and (max-width: $xl) {
+      @content;
+    }
+  }
+}

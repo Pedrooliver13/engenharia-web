@@ -1,0 +1,15 @@
+{
+  "name": "projeto-pedro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch public/css/sass/main.scss public/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}

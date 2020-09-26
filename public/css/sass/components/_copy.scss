@@ -1,0 +1,35 @@
+.copy {
+  @extend .row;
+  font-family: var(--font-1);
+  font-weight: lighter;
+  color: var(--secondary);
+
+  padding-top: var(--section-spacing-normal);
+  padding-bottom: var(--section-spacing-normal);
+
+  p {
+    grid-column: span 12;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: var(--font-sm);
+    line-height: 2;
+
+    @include mediaQuery(lg) {
+      grid-column: span 4;
+    }
+  }
+
+  .section-social {
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+
+    @include mediaQuery(lg) {
+      grid-column: span 4;
+    }
+  }
+}

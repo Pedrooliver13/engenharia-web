@@ -1,0 +1,44 @@
+:root {
+	// Cores
+	--primary: #cba47b;
+	--secondary: #000;
+	--white: #fff;
+	--brown: #2a2426;
+	--green: #1ab912;
+	--red: #e50914;
+
+	// Fontes
+	--font-1: 'Roboto', sans-serif;
+	--font-2: "Aref Ruqaa", serif;
+
+	// font
+	--font-normal: 1.125rem;
+	--font-sm: 0.8rem;
+	--font-md: 1.5rem;
+	--font-lg: 2rem;
+	--font-xl: 2.2rem;
+
+	--line-height-normal: 1.94;
+	--line-height-md: 1.5;
+
+	// grid columns
+	--page-max-width: 1380px;
+	--num-grid-columns: 12;
+	--section-spacing-lg: 250px;
+	--section-spacing-normal: 56px;
+
+	@include mediaQuery(lg) {
+		--page-max-width: 960px;
+		--num-grid-columns: 8;
+	}
+	
+	@include mediaQuery(md) {
+		--page-max-width: 720px;
+		--num-grid-columns: 4;
+	}
+	
+	@include mediaQuery(sm) {
+		--page-max-width: 540px;
+		--num-grid-columns: 4;
+	}
+}

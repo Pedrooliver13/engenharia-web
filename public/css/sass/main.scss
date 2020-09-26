@@ -1,0 +1,16 @@
+  
+// includes
+@import "includes/mixins";
+@import "includes/variables";
+
+// base
+@import 'base/base';
+@import 'base/grid';
+
+// componets
+@import 'components/header';
+@import 'components/section-main';
+@import 'components/section-social';
+@import 'components/section-contact';
+@import 'components/section-map';
+@import 'components/copy';

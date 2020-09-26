@@ -1,0 +1,16 @@
+.section-map {
+  margin: 80px auto;
+  padding: 8px;
+  
+  
+  @extend .row;
+
+  img {
+    filter: grayscale(80%);
+    grid-column: 3/span 8;
+
+    @include mediaQuery(md) {
+      grid-column: span 4;
+    }
+  }
+}
