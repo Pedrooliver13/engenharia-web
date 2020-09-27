@@ -1,5 +1,4 @@
 .copy {
-  @extend .row;
   font-family: var(--font-1);
   font-weight: lighter;
   color: var(--secondary);
@@ -8,11 +7,7 @@
   padding-bottom: var(--section-spacing-normal);
 
   p {
-    grid-column: span 12;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     text-align: center;
 
     font-size: var(--font-sm);
@@ -24,12 +19,12 @@
   }
 
   .section-social {
-    grid-column: span 12;
+    grid-column: span var(--num-grid-columns);
     display: flex;
     justify-content: center;
 
     @include mediaQuery(lg) {
-      grid-column: span 4;
+      grid-column: span var(--num-grid-columns);
     }
   }
 }

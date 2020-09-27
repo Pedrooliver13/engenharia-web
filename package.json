@@ -1,0 +1,20 @@
+{
+  "name": "projeto-pedro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch ./assets/css/sass/main.scss ./assets/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedrooliver13/engenharia-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedrooliver13/engenharia-site/issues"
+  },
+  "homepage": "https://github.com/Pedrooliver13/engenharia-site#readme"
+}

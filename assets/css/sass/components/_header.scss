@@ -1,9 +1,8 @@
 .menu {
+  text-transform: uppercase;
   font-family: var(--font-1);
   font-size: var(--font-normal);
   font-weight: lighter;
-
-  text-transform: uppercase;
 
   background-color: black;
   color: var(--white);
@@ -21,6 +20,13 @@
       height: 50px;
       object-fit: contain;
     }
+  }
+  
+  &__nav {
+    grid-column: var(--num-grid-columns) / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__toggle {
@@ -60,49 +66,46 @@
       transform: rotate(-45deg) translate(10px, -4px);
     }
   }
-  &__nav {
-    grid-column: -1;
+}
 
-    [data-menu="list"] {
-      position: fixed;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
+.js [data-menu="list"] {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
-      flex-flow: column wrap;
+  flex-flow: column wrap;
 
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      background-color: var(--secondary);
-      color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: var(--secondary);
+  color: #fcfcfc;
 
-      height: 100vh;
-      max-width: 500px;
-      width: 100%;
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
 
-      padding: 24px 48px 120px 24px;
+  padding: 24px 48px 120px 24px;
 
-      right: 0;
-      top: 0;
+  right: 0;
+  top: 0;
 
-      z-index: 1000;
+  z-index: 1000;
 
-      transform: translateX(200%);
-      transition: all 235ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  transform: translateX(200%);
+  transition: all 235ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
-      a {
-        font-weight: lighter;
-        font-size: var(--font-md);
-      
-        line-height: 2;
-        padding:8px;
-      }
-    }
-
-    [data-menu="list"].active {
-      transform: none;
-      transition: all 205ms cubic-bezier(0.19, 1, 0.22, 1);
-      animation: show-right 0.5s ease;
-    }
+  &.active {
+    transform: none;
+    transition: all 205ms cubic-bezier(0.19, 1, 0.22, 1);
+    animation: show-right 0.5s ease;
+  }
+  
+  a {
+    font-weight: lighter;
+    font-size: var(--font-md);
+  
+    line-height: 2;
+    padding:8px;
   }
 }
