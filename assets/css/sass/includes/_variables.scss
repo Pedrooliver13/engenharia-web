@@ -23,9 +23,10 @@
 
 	// grid columns
 	--page-max-width: 1480px;
+	--page-gutter: 15px;
 	--num-grid-columns: 12;
 	--section-spacing-lg: 250px;
-	--section-spacing-normal: 56px;
+	--section-spacing: 56px;
 
 	@include mediaQuery(lg) {
 		--page-max-width: 960px;
@@ -35,6 +36,7 @@
 	@include mediaQuery(md) {
 		--page-max-width: 720px;
 		--num-grid-columns: 4;
+		
 	}
 	
 	@include mediaQuery(sm) {

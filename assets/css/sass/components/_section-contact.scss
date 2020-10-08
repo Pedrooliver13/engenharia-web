@@ -1,43 +1,24 @@
 .section-contact {
   font-family: var(--font-1);
-
-  @extend .row;
-
-  &__title {
-    position: relative;
-    font-size: var(--font-md);
-
-    margin: 24px 0;
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      background: var(--primary);
-
-      width: 90px;
-      height: 3px;
-
-      transform: translateY(8px);
-    }
-  }
+  @extend .grid-section;
 
   &__local {
     grid-column: 2/span 4;
     text-transform: uppercase;
     
-    padding: var(--section-spacing-normal) 15px;
-
-    display: flex;
-    flex-direction: column;
+    padding: var(--section-spacing) 15px;
 
     @include mediaQuery(md) {
-      grid-column: span 4;
+      grid-column: span var(--num-grid-columns);
     }
 
     .section-contact__content {
-      font-weight: lighter;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      
       font-size: var(--font-normal);
+      font-weight: lighter;
       line-height: 2;
     }
   }
@@ -51,14 +32,20 @@
     align-items: center;
     flex-direction: column;
 
-    padding: var(--section-spacing-normal);
+    padding: var(--section-spacing);
 
-
-    @include mediaQuery(md) {
-      grid-column: span 4;
+    @include mediaQuery(xl) {
+      grid-column: 7/span 5;
+    }
+    
+    @include mediaQuery(lg) {
+      grid-column: span var(--num-grid-columns);
     }
 
-    .section-contact__title {
+    .title {
+      display: flex;
+      justify-content: center;
+
       font-size: var(--font-normal);
       font-weight: lighter;
       color: var(--white);
@@ -68,7 +55,6 @@
       font-size: var(--font-md);
       color: var(--white);
       line-height: 2;
-
 
       @include mediaQuery(md) {
         font-size: var(--font-normal);

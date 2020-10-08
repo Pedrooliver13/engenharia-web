@@ -13,8 +13,12 @@
   min-height: 88.0597vh;
   width: 100%;
 
-  &__wrapper {
-    @extend .row;
+  @include mediaQuery(md) {
+    background-attachment: scroll;
+  }
+
+  &__grid {
+    @extend .grid-section;
     align-items: center;
   }
   

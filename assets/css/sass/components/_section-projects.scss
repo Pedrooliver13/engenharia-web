@@ -1,20 +1,24 @@
 .section-projects {
   margin: 20px auto;
-  @extend .row;
+  padding: 0 var(--page-gutter);
+  border: 50px solid var(--white);
+  border-top: 120px solid var(--white);
+  border-bottom: 0;
 
   &__grid {
-    grid-column: 2/12;
+    grid-column: span var(--num-grid-columns);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10px auto 10px auto 10px;
     gap: 15px;
 
-    padding-right: 15px;
-    padding-left: 15px;
-
     transition: all .5s ease;
 
-    @include mediaQuery(md) {
+    @include mediaQuery(lg) {
+      grid-column: span var(--num-grid-columns);
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mediaQuery(sm) {
       grid-column: span var(--num-grid-columns);
       grid-template-columns: 1fr;
     }
@@ -26,7 +30,6 @@
     grid-row: span 2;
 
     cursor: pointer;
-
 
     &:nth-child(2) {
       grid-column: 2;
@@ -42,6 +45,11 @@
       width: 100%;
       min-height: 100%;
       object-fit: cover;
+      object-position: center center;
+
+      @include mediaQuery(md) {
+        object-fit: contain;
+      }
     }
 
     .section-projects__subtitle {
@@ -82,6 +90,10 @@
         height: 3px;
         margin-top: 10px;
         margin-bottom: 20px;
+      }
+
+      @include mediaQuery(xl) {
+        font-size: var(--font-sm);
       }
     }
 

@@ -1,0 +1,24 @@
+.title {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  margin: 24px 0;
+
+  font-family: var(--font-1);
+  font-size: var(--font-md);
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: var(--primary);
+
+    width: 30%;
+    height: 3px;
+
+    transform: translateY(20px);
+  }
+}

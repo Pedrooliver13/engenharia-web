@@ -21,7 +21,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>document.documentElement.className += ' js'</script>
+    <script>
+      document.documentElement.className += " js";
+    </script>
   </head>
   <body>
     <header class="menu">
@@ -41,7 +43,6 @@
 
           <ul class="menu__list" data-menu="list">
             <li><a href="/contato.html">HOME</a></li>
-            <li><a href="/contato.html">SOBRE</a></li>
             <li><a href="/contato.html">CONTATO</a></li>
             <li><a href="/index.html">PROJETOS</a></li>
           </ul>
@@ -50,47 +51,53 @@
     </header>
 
     <main>
-      <section class="section-main">
-        <div class="section-main__grid">
-          <div class="section-main__content">
-            <h1 class="section-main__title">OLÁ</h1>
-          </div>
-        </div>
-      </section>
+      <section class="show">
+        <article class="show__article">
+          <div class="title">Google De são Paulo</div>
 
-      <section class="section-contact">
-        <div class="section-contact__local">
-          <div class="title">
-            <h1>Endereço</h1>
-          </div>
-
-          <div class="section-contact__content">
+          <div class="show__content">
+            <h2>[ Sobre o projeto ]</h2>
             <p>
-              volpi ferraz Engenharia, Rua Venezuela, 15 - Sala 05 13465-792
-              Americana, SP +55 (19) 3461-4943
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatibus repellendus pariatur quibusdam voluptates quaerat
+              quis magnam illo. Fuga nesciunt voluptatum dolorum rerum fugit
+              excepturi velit corrupti itaque, quia unde, expedita ab molestiae
+              mollitia labore autem laudantium, blanditiis quasi reiciendis
+              assumenda rem magnam reprehenderit. Repudiandae quas, nobis nulla
+              officiis asperiores pariatur!
             </p>
           </div>
 
-          <div class="section-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="show__dashboard">
+            <ul>
+              
+            </ul>
           </div>
+        </article>
+
+        <div class="show__project">
+          <figure class="show__item" data-modal>
+            <img
+              data-gallery
+              src="https://source.unsplash.com/collection/632077/900x900"
+              alt="Google São Paulo"
+            />
+          </figure>
+          <figure class="show__item">
+            <img
+              data-gallery
+              src="https://source.unsplash.com/collection/632077/900x900"
+              alt="Foto do Projeto"
+            />
+          </figure>
+          <figure class="show__item">
+            <img
+              data-gallery
+              src="https://source.unsplash.com/collection/632077/900x900"
+              alt="Foto do Projeto"
+            />
+          </figure>
         </div>
-
-        <div class="section-contact__info">
-          <div class="title">
-            <h3>CONTATO E MIDIA</h3>
-          </div>
-
-          <div class="section-contact__description">
-            <h2>yasmin@volpiferraz.com.br</h2>
-            <h2>guilherme@volpiferraz.com.br</h2>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-map">
-        <img src="./assets/img/mapa.jpg" alt="Endereço do local" />
       </section>
     </main>
 

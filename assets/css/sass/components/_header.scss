@@ -1,32 +1,37 @@
 .menu {
-  text-transform: uppercase;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
   font-family: var(--font-1);
-  font-size: var(--font-normal);
   font-weight: lighter;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.8s linear;
 
-  background-color: black;
-  color: var(--white);
-
-  &__wrapper {
-    @extend .row;
+  &__grid {
+    @extend .grid-section;
     align-items: center;
     padding: 20px 15px;
   }
 
   &__logo {
-    grid-column: span 3;
+    grid-column: span 2;
 
     img {
-      height: 50px;
+      height: 40px;
       object-fit: contain;
     }
   }
-  
+
   &__nav {
     grid-column: var(--num-grid-columns) / -1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   &__toggle {
@@ -75,14 +80,11 @@
   justify-content: center;
 
   flex-flow: column wrap;
-
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   background-color: var(--secondary);
   color: #fcfcfc;
 
   height: 100vh;
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
 
   padding: 24px 48px 120px 24px;
@@ -100,12 +102,12 @@
     transition: all 205ms cubic-bezier(0.19, 1, 0.22, 1);
     animation: show-right 0.5s ease;
   }
-  
+
   a {
     font-weight: lighter;
     font-size: var(--font-md);
-  
+
     line-height: 2;
-    padding:8px;
+    padding: 8px;
   }
 }

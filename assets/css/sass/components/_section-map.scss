@@ -1,9 +1,7 @@
 .section-map {
   margin: 80px auto;
   padding: 8px;
-  
-  
-  @extend .row;
+  @extend .grid-section;
 
   img {
     filter: grayscale(80%);
