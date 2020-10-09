@@ -10,6 +10,8 @@
   }
 
   .title {
+    display: flex;
+    justify-content: flex-start;
     color: var(--secondary);
     font-size: var(--font-md);
     font-weight: bold;
