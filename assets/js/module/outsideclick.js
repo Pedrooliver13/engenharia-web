@@ -8,7 +8,7 @@ export default function outsideClick(element, events, callback) {
       events.forEach((userEvent) => {
         html.removeEventListener(userEvent, handleOutsideClick);
       });
-      callback();
+      callback(); // esse é o responsável por remove.
     }
   }
 

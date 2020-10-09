@@ -51,7 +51,7 @@
 
     <main>
       <section class="section-main">
-        <div class="section-main__grid">
+        <div class="section-main__container">
           <div class="section-main__content">
             <h1 class="section-main__title">OLÁ</h1>
           </div>
@@ -90,7 +90,7 @@
       </section>
 
       <section class="section-map">
-        <img src="./assets/img/mapa.jpg" alt="Endereço do local" />
+        <img data-modal="open" src="./assets/img/mapa.jpg" alt="Endereço do local" />
       </section>
     </main>
 
@@ -105,6 +105,13 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </footer>
+
+    <section class="modal__container" data-modal="container">
+      <div class="modal__content">
+        <button class="modal__close" data-modal="close">X</button>
+        <img src="" alt="" />
+      </div>
+    </section>
 
     <script type="module" src="./assets/js/scripts.js"></script>
   </body>

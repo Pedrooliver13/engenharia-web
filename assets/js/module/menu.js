@@ -6,8 +6,6 @@ export default class Menu {
     this.menuList = document.querySelector(menuList);
     this.activeClass = 'active';
 
-    // define touchstart e click como argumento padrão
-    // de events caso o usuário não define
     if (events === undefined) this.events = ['click'];
     else this.events = events;
 
@@ -18,11 +16,11 @@ export default class Menu {
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
     document.body.style.overflow = 'hidden';
+
     outsideClick(this.menuList, this.events, () => {
       this.menuList.classList.remove(this.activeClass);
       this.menuButton.classList.remove(this.activeClass);
       document.body.style.overflow = 'auto';
-
     });
   }
 

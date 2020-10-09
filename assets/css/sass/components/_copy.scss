@@ -12,19 +12,10 @@
 
     font-size: var(--font-sm);
     line-height: 2;
-
-    @include mediaQuery(lg) {
-      grid-column: span 4;
-    }
   }
 
   .section-social {
-    grid-column: span var(--num-grid-columns);
     display: flex;
     justify-content: center;
-
-    @include mediaQuery(lg) {
-      grid-column: span var(--num-grid-columns);
-    }
   }
 }

@@ -1,79 +1,75 @@
 .show {
-  border-top: 80px solid var(--white);
-  font-family: var(--font-1);
-  padding: 20px var(--page-gutter);
+  border-top: 100px solid var(--white);
+  padding-right: 15px;
+  padding-left: 15px;
 
-  @extend .grid-section;
+  @extend .container;
 
-  &__article {
-    grid-column: span 6;
-    display: grid;
-    grid-template-rows: 80px 1fr;
-    gap: 20px;
+  @include mediaQuery(md) {
+    padding: 0 15px;
+  }
+
+  .title {
+    color: var(--secondary);
+    font-size: var(--font-md);
+    font-weight: bold;
 
     @include mediaQuery(md) {
-      grid-column: span var(--num-grid-columns);
-    }
-
-    .title {
-      grid-column: span 4;
-      font-size: var(--font-md);
-
-      @include mediaQuery(md) {
-        grid-column: span var(--num-grid-columns);
-      }
-      
-      &::after {
-        margin-top: 20px;
-      }
-    }
-
-    .show__content {
-      grid-column: span 6;
-  
       font-size: var(--font-normal);
-      font-weight: lighter;
-      text-align: justify;
-      line-height: 2;
-  
-      h2 {
-        text-transform: lowercase;
-        font-size: var(--font-normal);
-        font-weight: bold;
-      }
     }
   }
 
-  &__dashboard {
-    grid-column: span 6;
-  }
-
-  /* photos */
-  &__project {
-    grid-column: span var(--num-grid-columns);
+  &__article {
     display: grid;
-    align-items: flex-start;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 30px;
-    gap: 20px;
+    grid-template-columns: minmax(400px, 800px) 500px;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin: 16px auto;
+
+    font-family: var(--font-1);
+    font-size: var(--font-normal);
+    font-weight: lighter;
+    line-height: 1.5;
+
+    h2 {
+      line-height: 2;
+      font-weight: bold;
+    }
+
+    .show__dashboard span {
+      color: var(--primary);
+    }
 
     @include mediaQuery(md) {
       grid-template-columns: 1fr;
-    } 
+    }
+  }
+
+  &__project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+
+    margin-top: 40px;
+    transition: all 0.5s ease;
+
+    @include mediaQuery(md) {
+      grid-template-columns: 1fr;
+    }
 
     .show__item {
+      display: flex;
       width: 100%;
-      height: 500px;
-
-      cursor: pointer;
+      max-height: 900px;
+      height: 100%;
 
       img {
         width: 100%;
-        height: 100%;
+        height: 90%;
         object-fit: cover;
+        cursor: pointer;
       }
     }
-    
   }
 }

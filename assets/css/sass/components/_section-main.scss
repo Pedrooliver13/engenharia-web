@@ -17,13 +17,11 @@
     background-attachment: scroll;
   }
 
-  &__grid {
-    @extend .grid-section;
-    align-items: center;
+  &__container {
+    @extend .container;
   }
-  
+
   &__content {
-    grid-column: span var(--num-grid-columns);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +34,6 @@
       font-size: var(--font-lg);
       text-transform: uppercase;
 
-      text-align: center;
       letter-spacing: 2.8px;
 
       &::after {

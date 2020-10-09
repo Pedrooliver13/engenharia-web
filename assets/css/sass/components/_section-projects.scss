@@ -1,12 +1,11 @@
 .section-projects {
   margin: 20px auto;
   padding: 0 var(--page-gutter);
-  border: 50px solid var(--white);
-  border-top: 120px solid var(--white);
+  border-top: 100px solid var(--white);
   border-bottom: 0;
+  @extend .container;
 
   &__grid {
-    grid-column: span var(--num-grid-columns);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10px auto 10px auto 10px;
@@ -15,11 +14,9 @@
     transition: all .5s ease;
 
     @include mediaQuery(lg) {
-      grid-column: span var(--num-grid-columns);
       grid-template-columns: 1fr 1fr;
     }
     @include mediaQuery(sm) {
-      grid-column: span var(--num-grid-columns);
       grid-template-columns: 1fr;
     }
   }

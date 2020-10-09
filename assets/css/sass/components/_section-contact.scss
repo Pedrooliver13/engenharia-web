@@ -1,16 +1,18 @@
 .section-contact {
   font-family: var(--font-1);
-  @extend .grid-section;
+  @extend .container;
+  display: grid;
+  grid-template-columns: 350px minmax(200px, 550px);
+  justify-content: space-around;
+
+  @include mediaQuery(md) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
 
   &__local {
-    grid-column: 2/span 4;
     text-transform: uppercase;
-    
     padding: var(--section-spacing) 15px;
-
-    @include mediaQuery(md) {
-      grid-column: span var(--num-grid-columns);
-    }
 
     .section-contact__content {
       display: flex;
@@ -24,7 +26,6 @@
   }
 
   &__info {
-    grid-column: 8 / span 4;
     background-color: var(--secondary);
 
     display: flex;

@@ -1,14 +1,15 @@
 .section-map {
   margin: 80px auto;
   padding: 8px;
-  @extend .grid-section;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend .container;
+  
   img {
+    cursor: pointer;
+    object-fit: cover;
     filter: grayscale(80%);
-    grid-column: 3/span 8;
-
-    @include mediaQuery(md) {
-      grid-column: span 4;
-    }
   }
 }
