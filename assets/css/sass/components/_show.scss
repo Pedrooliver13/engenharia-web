@@ -21,9 +21,10 @@
 
   &__article {
     display: grid;
-    grid-template-columns: minmax(400px, 800px) 500px;
+    grid-template-columns: minmax(350px, 700px) minmax(100px, 500px);
     align-items: flex-end;
     justify-content: space-between;
+    gap: 20px;
 
     margin: 16px auto;
 

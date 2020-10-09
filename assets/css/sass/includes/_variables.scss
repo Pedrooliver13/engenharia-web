@@ -23,7 +23,7 @@
 
 	// grid columns
 	--page-max-width: 1480px;
-	--page-gutter: 15px;
+	--page-gutter: 56px;
 	--num-grid-columns: 12;
 	--section-spacing-lg: 250px;
 	--section-spacing: 56px;
@@ -36,7 +36,7 @@
 	@include mediaQuery(md) {
 		--page-max-width: 720px;
 		--num-grid-columns: 4;
-		
+		--page-gutter: 15px;
 	}
 	
 	@include mediaQuery(sm) {
